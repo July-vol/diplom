@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Main, Tag
+from .models import Index, Tag
 
-admin.site.register(Main)
+admin.site.register(Index)
 admin.site.register(Tag)

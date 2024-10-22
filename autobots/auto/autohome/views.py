@@ -1,9 +1,13 @@
 from django.shortcuts import render
-from .models import Main
-from django.db.backends.base.base import BaseDatabaseWrapper
+
+from .models import Index
 
 
-def main(request):
-    pg = Main.objects.all()
+def index(request):
+    pg = Index.objects.all()
     context = {'pages': pg}
-    return render(request, 'autohome/main.html', context)
+    return render(request, 'autohome/index.html', context)
+
+
+def about(request):
+    return render(request, 'autohome/about.html')
