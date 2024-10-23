@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+ {% load static %}
+<html>
+<head>
+<title>Auto Cars | Home</title>
+<link href="static/autohome/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary JavaScript plugins) -->
+<script src="static/autohome/js/bootstrap.js"></script>
+<!-- Custom Theme files -->
+<link href="static/autohome/css/style.css" rel='stylesheet' type='text/css' />
+
+<!-- Custom Theme files -->
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="static/autohome/js/jquery.min.js"></script>
+ <script src="static/autohome/js/bootstrap.js"></script>
+
+<script src="static/autohome/js/responsiveslides.min.js"></script>
+
+					 <script>
+						// You can also use "$(window).load(function() {"
+						$(function () {
+						  // Slideshow 4
+						  $("#slider3,#slider2").responsiveSlides({
+							auto: true,
+							pager: true,
+							nav: false,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+							  $('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+							  $('.events').append("<li>after event fired.</li>");
+							}
+						  });
+
+						});
+					  </script>
+
+</head>
+<body>
+
+
+{% include 'autohome/navbar.html' %}
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
+

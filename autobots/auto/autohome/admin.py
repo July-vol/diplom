@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Index, Tag
+from .models import Autohome, Tag
 
-admin.site.register(Index)
+admin.site.register(Autohome)
 admin.site.register(Tag)

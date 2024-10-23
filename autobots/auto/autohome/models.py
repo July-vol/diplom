@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Index(models.Model):
+class Autohome(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     featured_image = models.ImageField(default="default.jpg", upload_to="projects/%Y/%m/%d")

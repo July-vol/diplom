@@ -1,10 +1,10 @@
 from django.shortcuts import render
 
-from .models import Index
+from .models import Autohome
 
 
-def index(request):
-    pg = Index.objects.all()
+def autohome(request):
+    pg = Autohome.objects.all()
     context = {'pages': pg}
     return render(request, 'autohome/index.html', context)
 
