@@ -1,32 +1,14 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Auto Cars | Contact</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary JavaScript plugins) -->
-<script src="js/bootstrap.js"></script>
-<!-- Custom Theme files -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-
-<!-- Custom Theme files -->
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<script src="js/jquery.min.js"></script>
- <script src="js/bootstrap.js"></script>
-
-</head>
-<body>
+{% extends 'autohome/base.html' %}
+{% block content %}
 <!-- banner -->
 <div class="banner banner2">
 	 <div class="container">
 	     <div class="header">
 			 <div class="logo">
-				 <h1><a href="index.html"><img src="images/car.png" alt=""/>AUTO <span>CARS</span></a></h1>
+				 <h1><a href="index"><img src="'static/autohome/images/car.png" alt=""/>AUTO <span>BOTS</span></a></h1>
 			 </div>
 			 <div class="top_details">
-				 <p><span></span> (880)123 2500</p>
+				 <p><span></span> +7-915-684-52-73 </p>
 				 <div class="search">
 				 <form>
 					<input type="text" value="" placeholder="Search...">
@@ -47,25 +29,25 @@
 			 </div>
 			 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav">
-					<li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="gallery.html">Gallery</a></li>
-					<li class="active"><a href="contact.html">Contact Us</a></li>
+						<li><a href="{ url 'index' }">  Главная <span class="sr-only">(current)</span></a></li>
+					<li><a href="{ url 'about' }"> О нас </a></li>
+					<li><a href="{ url 'services' }">Наши услуги</a></li>
+					<li><a href="{ url 'blog' }"> Новости </a></li>
+					<li><a href="{ url 'gallery' }"> Наши осмотры </a></li>
+					<li class="active"><a href="{ url 'contact' }"> Контакты </a></li>
 				  </ul>
 			 </div>
-	      </nav>					
+	      </nav>
 	 </div>
 </div>
 <!---->
 <div class="contact">
 		<div class="container">
 			<div class="contact-top">
-				<h2>Contact</h2>
+				<h2>Контакты</h2>
 				<ol class="breadcrumb">
-				<li><a href="index.html">Home</a></li>
-				<li class="active">Contact</li>						  
+				<li><a href="index.html"> { Главная } </a></li>
+				<li class="active">{Контакты}</li>
 			 </ol>
 			</div>
 			<div class="contact-bottom">
@@ -154,5 +136,4 @@
 </div>
 <!---->
 
-</body>
-</html>
+{% endblock %}

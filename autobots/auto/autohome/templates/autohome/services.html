@@ -1,70 +1,12 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Auto Cars | Services</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary JavaScript plugins) -->
-<script src="js/bootstrap.js"></script>
-<!-- Custom Theme files -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-
-<!-- Custom Theme files -->
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<script src="js/jquery.min.js"></script>
- <script src="js/bootstrap.js"></script>
-
-</head>
-<body>
-<!-- banner -->
-<div class="banner banner2">
-	 <div class="container">
-	     <div class="header">
-			 <div class="logo">
-				 <h1><a href="index.html"><img src="images/car.png" alt=""/>AUTO <span>CARS</span></a></h1>
-			 </div>
-			 <div class="top_details">
-				 <p><span></span> (880)123 2500</p>
-				 <div class="search">
-				 <form>
-					<input type="text" value="" placeholder="Search...">
-					<input type="submit" value="">
-					</form>
-			     </div>
-			 </div>
-			 <div class="clearfix"></div>
-		 </div>
-		 <nav class="navbar navbar-default">
-			 <div class="navbar-header">
-					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"> </span>
-						<span class="icon-bar"> </span>
-						<span class="icon-bar"> </span>
-					  </button>
-			 </div>
-			 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-				  <ul class="nav navbar-nav">
-					<li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-					<li><a href="about.html">About</a></li>
-					<li class="active"><a href="services.html">Services</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="gallery.html">Gallery</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				  </ul>
-			 </div>
-	      </nav>					
-	 </div>
-</div>
+{% extends 'autohome/base.html' %}
+{% block content %}
 <!---->
 <div class="services">
 	 <div class="container">
-		 <h2>Services</h2>
+		 <h2> Наши услуги</h2>
 			 <ol class="breadcrumb">
-				<li><a href="index.html">Home</a></li>
-				<li class="active">Services</li>						  
+				<li><a href="index">  Главная  </a></li>
+				<li class="active"> Наши услуги </li>
 			    </ol>
 	    	<div class="section group sec_group">
 				<div class="col-md-6 service_sec">
@@ -72,41 +14,19 @@
 						  <img src="images/service-6.png" alt="" />
 					</div>
 				    <div class="text list_2_of_1">
-						<h3>Live Support</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt  ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor labore.</p>
+						<h3>Сверка VIN номера:</h3>
+						<p>- нанесения VIN номера / номер двигателя
+							- документы, дублирующие таблички и электронные блоки</p>
 				   </div>
 				   <div class="clearfix"></div>
-			   </div>			
+			   </div>
 			  <div class="col-md-6 service_sec ">
 					<div class="listimg listimg_2_of_1">
-						  <img src="images/service-2.png" alt="" />
+						  <img src=" media/autohome/images/service-2.png" alt="" />
 					</div>
 					<div class="text list_2_of_1">
-						  <h3>Repair Services</h3>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt  ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor labore.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="clearfix"></div>
-			</div>  
-			<div class="section group sec_group">
-				<div class="col-md-6 service_sec">
-					<div class="listimg listimg_2_of_1">
-						  <img src="images/service-3.png" alt="" />
-					</div>
-				    <div class="text list_2_of_1">
-						<h3>Complete Care</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt  ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-				   </div>
-				   <div class="clearfix"></div>
-			   </div>			
-				<div class="col-md-6 service_sec">
-					<div class="listimg listimg_2_of_1">
-						  <img src="images/service-4.png" alt="" />
-					</div>
-					<div class="text list_2_of_1">
-						  <h3>Spare Parts</h3>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt  ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+						  <h3>Сверка маркировочных обозначений и датировок:</h3>
+						  <p>- стекла, ремни безопасности, оптика, и т.д.</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -115,17 +35,49 @@
 			<div class="section group sec_group">
 				<div class="col-md-6 service_sec">
 					<div class="listimg listimg_2_of_1">
-						  <img src="images/service-5.png" alt="" />
+						  <img src="media/autohome/images/service-3.png" alt="" />
 					</div>
 				    <div class="text list_2_of_1">
-						<h3>Sales Services</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt  ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+						<h3>Проверка кузова:</h3>
+						<p>- силовая часть
+							- вторичные окрасы / ремонт элемента
+							- болты оперения
+							- оригинальность элементов, зазоры</p>
 				   </div>
 				   <div class="clearfix"></div>
-			   </div>			
+			   </div>
 				<div class="col-md-6 service_sec">
 					<div class="listimg listimg_2_of_1">
-						  <img src="images/service-1.png" alt="" />
+						  <img src="media/autohome/images/service-4.png" alt="" />
+					</div>
+					<div class="text list_2_of_1">
+						  <h3>Выявления недостатков салона и багажного отделения:</h3>
+						  <p>- осмотр наличия систем безопасности
+							  - осмотр повреждения различного характера
+							  - проверка работоспособности электронных систем</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="section group sec_group">
+				<div class="col-md-6 service_sec">
+					<div class="listimg listimg_2_of_1">
+						  <img src="media/autohome/images/service-5.png" alt="" />
+					</div>
+				    <div class="text list_2_of_1">
+						<h3>Компьютерная диагностика автомобиля:</h3>
+						<p>- проверка наличия активных ошибок
+							- проверка находящихся ошибок в истории
+							- проверка на корректировку пробега в блоках ЭБУ
+							- проверка текущих параметров/p>
+
+				   </div>
+				   <div class="clearfix"></div>
+			   </div>
+				<div class="col-md-6 service_sec">
+					<div class="listimg listimg_2_of_1">
+						  <img src="media/autohome/images/service-1.png" alt="" />
 					</div>
 					<div class="text list_2_of_1">
 						  <h3>Tyre Services</h3>
@@ -135,60 +87,7 @@
 				</div>
 				<div class="clearfix"></div>
 		 </div>
-	 </div>  	   
- </div> 
-<!---->
-<div class="footer2">	
-	 <div class="container">
-	     <div class="ftr2-grids">
-		      <div class="col-md-4 ftr2-grid1">			 
-				 <h3>About Us</h3>
-				 <ul>
-					  <li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="gallery.html">Gallery</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				 </ul>
-			 </div>
-			 <div class="col-md-4 ftr2-grid2">
-				 <h3>Latest Tweets</h3>
-				 <div class="ftr2-grid">
-						 <p>It is a long established fact that a 
-						 reader will be distracted by the of a reader page when at its layout.</p>
-						 <a href="#">1 Hour ago</a>
-				  </div>
-				  <div class="ftr2-grid">
-						 <p>It is a long established fact that a 
-						 reader will be distracted by the of a reader page when at its layout.</p>
-						 <a href="#">3 Hour ago</a>
-				  </div>
-			 </div>
-			 <div class="col-md-4 ftr6-grid3">
-				 <h3>Get in Touch</h3>				 
-				 <p>It is a long established fact that a reader will be distracted by the r-
-				 eadable content of a page when looking at its layout.</p>
-				 <form>					 
-					  <input type="text" class="text" value="Enter Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Email';}">
-					 <input type="submit" value="Subscribe"/>
-				 </form>
-				 <div class="social">
-					   <ul>
-							<li><a href="#"><i class="facebook"></i></a></li>
-							<li><a href="#"><i class="twitter"></i></a></li>
-							<li><a href="#"><i class="dribble"></i></a></li>	
-							<li><a href="#"><i class="google"></i></a></li>										
-					  </ul>
-				 </div>
-			 </div>
-			 <div class="clearfix"></div>
-		 </div>
 	 </div>
-	 <div class="col-md-8 ftr2-bottom">		
-			<p>Copyright &copy; 2015 <span>Auto Cars</span> All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-	 </div>
-</div>
+ </div>
 <!---->
-
-</body>
-</html>
+{% endblock %}
