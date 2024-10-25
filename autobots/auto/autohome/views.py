@@ -3,8 +3,9 @@ from django.shortcuts import render
 from .models import Autohome
 
 
-def index(request):
-    return render(request, 'autohome/index.html')
+def autohome(request):
+    projects = Autohome.objects.all()
+    return render(request, 'autohome/index.html', {'projects': projects})
 
 
 def about(request):
