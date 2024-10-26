@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
                 ('vote_total', models.IntegerField(blank=True, default=0)),
                 ('vote_ratio', models.IntegerField(blank=True, default=0)),
                 ('created', models.DateTimeField(auto_now_add=True)),
-                ('tags', models.ManyToManyField(blank=True, to='blog.tag')),
+                ('tags', models.ManyToManyField(blank=True, to='gallery.tag')),
             ],
         ),
     ]
