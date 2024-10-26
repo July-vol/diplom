@@ -1,34 +1,21 @@
+
 {% extends 'autohome/base.html' %}
 {% block content %}
-
-<title>Auto Cars | О нас </title>
-<link href="static/autohome/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary JavaScript plugins) -->
-<script src="static/autohome/js/bootstrap.js"></script>
-<!-- Custom Theme files -->
-<link href="static/autohome/css/style.css" rel='stylesheet' type='text/css' />
-
-<!-- Custom Theme files -->
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<script src="static/autohome/js/jquery.min.js"></script>
- <script src="static/autohome/js/bootstrap.js"></script>
 <div class="about">
 	 <div class="container">
-		 <h2> О нас </h2>
+		 <h2> Об эксперте </h2>
 			 <ol class="breadcrumb">
-				<li><a href="index.html"> Главная </a></li>
-				<li class="active"> О Нас </li>
+				<li><a href="{% url 'index' %}"> Главная </a></li>
+				<li class="active"> Об эксперте </li>
 			    </ol>
 		 <div class="about-grids">
 			 <div class="col-md-4 about-pic">
 				  <img src="static/autohome/images/pic3.jpg" class="img-responsive" alt=""/>
 			 </div>
 			 <div class="col-md-8 about-info">
-				 <h3>Чем поможет специалист по подбору авто? Сколько стоит услуга по подбору автомобиля в Москве и других регионах? Как выбрать автоподборщика и понять, что он окажет квалифицированную помощь при выборе авто, а не просто выудит с вас деньги? </h3>
-				 <p>Подбор автомобиля на вторичном рынке не так прост, как может показаться на первый взгляд. Если вы никогда не покупали машину с пробегом и вообще не разбираетесь в авто, вам будет сложно определить техническое состояние ТС, проверить автомобиль на наличие ДТП, а также произвести юридическую оценку автомобиля. Позже это может влететь в копеечку или вовсе лишить вас транспортного средства. </p>
+				 <h3>Эксперт Алексей, c 2020 года профeсcиональнo зaнимаюсь автопoдбopом aвтoмoбиля под ключ и выездной диагностикой автомoбиля пepeд покупкoй</h3>
+				 <p>При выборе услуге эксперт на день, выезжаю совместно с Вами и делаю экспресс-выборку, выезжаю на осмотр (передвижение на нашем авто). Неограниченное количество осмотров машин в течение дня (8 часов), при этом вы получаете полную проверку и оценку осматриваемых автомобилей.
+					Заказывая наши Вы получите: </p>
 			 </div>
 			 <div class="clearfix"></div>
 		 </div>
@@ -39,12 +26,12 @@
 							<figure><span>1</span></figure>
 					   </div>
 					  <div class="heading">								
-						  <h4>☎️ Звoнитe пo тeлефoну или пишите в WhatsАpp пpямo сейчас!</h4>
+						  <h4> Гарантию </h4>
 					  </div>
 					  <div class="clearfix"></div>
 				 </div> 
 				 <div class="heading-desc">	
-					 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+					 <p> Пpовeрку юpидичеcкой чистоты сдeлки по базaм. Прoверку подлинности документов (ПТС, св-во о регистрации) - стало много криминальных машин с Казахстана и РФ под "смытые" ПТС и с изменением идентификационных номеров! Проверка реального собственника на предмет наличия задолженностей (обезопасит Вас в будущем)</p>
 				 </div>	
 			 </div>
 			 <div class="col-md-3 abt-sec span_1_of_4">
@@ -53,12 +40,12 @@
 							<figure><span>2</span></figure>
 					   </div>
 					  <div class="heading">								
-						  <h4>Wheel Alignment</h4>
+						  <h4> Полный фотоотчет </h4>
 					  </div>
 					  <div class="clearfix"></div>
 				 </div> 
 				 <div class="heading-desc">	
-					 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+					 <p> Подбор автомобиля под ключ. Поиск будет осуществляться до тех пор, пока мы не найдём по заданным параметрам.Предоставляю фотоотчёт с помощью ПРОФЕССИОНАЛЬНОЙ фото техники. Мы вышлем вам фото авто со всех возможных ракурсов, фото недочетов если таковые имеются и дадим самую честную оценку и рекомендации по автомобилю.</p>
 				 </div>	
 			 </div>
 			 <div class="col-md-3 abt-sec span_1_of_4">
@@ -67,12 +54,12 @@
 							<figure><span>3</span></figure>
 					   </div>
 					  <div class="heading">								
-						  <h4>Car Wash</h4>
+						  <h4>Уверенность </h4>
 					  </div>
 					  <div class="clearfix"></div>
 				 </div> 
 				 <div class="heading-desc">	
-					 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+					 <p>Полное сопровождение сделки. Каждый день Вы получаете отчет о проделанной работе по поиску автомобилей, по заданным Вами критериям.</p>
 				 </div>	
 			 </div>
 			 <div class="col-md-3 abt-sec span_1_of_4">
@@ -81,44 +68,44 @@
 							<figure><span>4</span></figure>
 					   </div>
 					  <div class="heading">								
-						  <h4>Auto Touning</h4>
+						  <h4>Экономию времени </h4>
 					  </div>
 					  <div class="clearfix"></div>
 				 </div> 
 				 <div class="heading-desc">	
-					 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+					 <p>Не нужно ездить и осматривать автомобили. Вы не тратите время на поиск, телефонные звонки и проверку выбранных вариантов автомобилей.</p>
 				 </div>	
 			 </div>
 			 <div class="clearfix"></div>
 		 </div>	
 		 <div class="works">
-			  <h3>Our Team</h3>	  
+			  <h3> Почему не стоит выбирать авто самому и чем это опасно </h3>
 			  <div class="grid_4">
 				<div class="text1">
-						   <img src="static/autohome/mages/t1.jpg" alt="">
-						   <h4>Phasellus scipitilifen lus.</h4>
-						  <p>Kuspendisse laoreet augue iderti wer  interdum merti oremolo lectusto odio, sedorolu fringilla estero libero. </p>
+						   <img src="static/autohome/images/t1.jpg" alt="">
+						   <h4>Деньги</h4>
+						  <p>Потраченными на ремонт скрытых дефектов и неисправностей или оплата налога на автомобиль, который не платил владелец, а вы не сможете снять авто с учета, пока он не будет оплачен. </p>
 					  </div>
 			  </div>
 			  <div class="grid_4">
 				 <div class="text1">
 						   <img src="static/autohome/images/t2.jpg" alt="">
-						   <h4>Phasellus scipitilifen lus.</h4>
-						  <p>Kuspendisse laoreet augue iderti wer  interdum merti oremolo lectusto odio, sedorolu fringilla estero libero. </p>
+						   <h4>Здоровье</h4>
+						  <p>Автомобиль, побывавший в серьезном ДТП, может вас уже не спасти. Поэтому экономия пары тысяч рублей на проверке может обойтись слишком дорого.</p>
 					  </div>
 			  </div>
 			  <div class="grid_4 span66">
 				<div class="text1">
 						   <img src="static/autohome/images/t3.jpg" alt="">
-						   <h4>Phasellus scipitilifen lus.</h4>
-						  <p>Kuspendisse laoreet augue iderti wer  interdum merti oremolo lectusto odio, sedorolu fringilla estero libero. </p>
+						   <h4>Время</h4>
+						  <p>Дни и часы, проведенные в автосервисе во время ремонта приобретенного автомобиля с дефектами или судебные разбирательства с обременением на автомобиле.</p>
 					  </div>
 			  </div>      
 			  <div class="grid_4">				 
 					  <div class="text1">
 						   <img src="static/autohome/images/t4.jpg" alt="">
-						   <h4>Phasellus scipitilifen lus.</h4>
-						  <p>Kuspendisse laoreet augue iderti wer  interdum merti oremolo lectusto odio, sedorolu fringilla estero libero. </p>
+						   <h4>Нервы</h4>
+						  <p> Попытки вернуть неисправный автомобиль в салон или сделать что-то по «липовой» гарантии довольно стрессовое состояние. К тому же малоперспективное. </p>
 					  </div>					  
 				 </div>
 			  </div>
@@ -126,5 +113,55 @@
           </div>
 		 
 	 </div>
+</div>
+<!---->
+<div class="footer2">	
+	 <div class="container">
+	     <div class="ftr2-grids">
+		      <div class="col-md-4 ftr2-grid1">			 
+				 <h3> Об эксперте </h3>
+				 <ul>
+					 <li><a href="{% url 'about' %}"> Об эксперте </a></li>
+					<li><a href="{% url 'services' %}"> Услуги </a></li>
+					<li><a href="{% url 'blog' %}"> Новости </a></li>
+					<li><a href="{% url 'gallery' %}"> Осмотры </a></li>
+					<li><a href="{% url 'contact' %}">Контакты </a></li>
+				 </ul>
+			 </div>
+			 <div class="col-md-4 ftr2-grid2">
+				 <h3>Последние новости </h3>
+				 <div class="ftr2-grid">
+						 <p>Экстерьер нового Fulwin A8L C-DM стал более стильным: он оснащен восьмиугольной решеткой радиатора с матричным декором, а тонкие фары теперь не соединены с решеткой. Сзади заметно изменение логотипа – вместо «CHERY» теперь используется слово «FULWIN», а также обновлена форма задних фонарей.</p>
+						 <a href="#"> 1 час назад </a>
+				  </div>
+				  <div class="ftr2-grid">
+						 <p>В сентябре 2024 года россияне купили 529,4 тыс. легковых автомобилей с пробегом
+Сентябрь 2024 года завершился на российском вторичном рынке легковых автомобилей с показателем в 529,4 тысячи проданных машин. Несмотря на небольшое снижение по сравнению с августом (5,5%), общий объем продаж все же превысил сентябрьский результат прошлого года на 3,9%.</p>
+						 <a href="#"> 3 часа назад </a>
+				  </div>
+			 </div>
+			 <div class="col-md-4 ftr6-grid3">
+				 <h3>Оставить заявку на услугу:</h3>
+				 <p>Заполни форму с описанием и укажи обратный контакт для связи или позвони по номеру: +7 (915) 684-52-73  </p>
+				 <form>					 
+					  <input type="text" class="text" value="Enter Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Email';}">
+					 <input type="submit" value="Subscribe"/>
+				 </form>
+				 <div class="social">
+					   <ul>
+							<li><a href="#"><i class="facebook"></i></a></li>
+							<li><a href="#"><i class="twitter"></i></a></li>
+							<li><a href="#"><i class="dribble"></i></a></li>	
+							<li><a href="#"><i class="google"></i></a></li>										
+					  </ul>
+				 </div>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+	 <div class="col-md-8 ftr2-bottom">		
+			<p>Copyright &copy; 2024<span>AUTOBOTS</span> All rights reserved | Design by <a href="https://www.avito.ru/tula/predlozheniya_uslug/avtopodbor_tula_-_tul_obl_proverka_avto_s_probegom_2269374497m">Auto</p>
+	 </div>
+</div>
 <!---->
 {% endblock %}

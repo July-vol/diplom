@@ -1,12 +1,12 @@
 {% extends 'autohome/base.html' %}
 {% block content %}
-<!---->
+
 <div class="services">
 	 <div class="container">
-		 <h2> Наши услуги</h2>
+		 <h2> Услуги </h2>
 			 <ol class="breadcrumb">
-				<li><a href="index">  Главная  </a></li>
-				<li class="active"> Наши услуги </li>
+				<li><a href="{% url 'index' %}"> Главная </a></li>
+				<li class="active"> Услуги </li>
 			    </ol>
 	    	<div class="section group sec_group">
 				<div class="col-md-6 service_sec">
@@ -14,19 +14,41 @@
 						  <img src="static/autohome/images/service-6.png" alt="" />
 					</div>
 				    <div class="text list_2_of_1">
-						<h3>Сверка VIN номера:</h3>
-						<p>- нанесения VIN номера / номер двигателя
-							- документы, дублирующие таблички и электронные блоки</p>
+						<h3> Диагностика авто перед покупкой </h3>
+						<p>Комплексная проверка автомобиля в условиях сервиса. Диагностический лист на фирменном бланке. Экспертное заключение о целесообразности покупки. Торг с продавцом.</p>
 				   </div>
 				   <div class="clearfix"></div>
-			   </div>
+			   </div>			
 			  <div class="col-md-6 service_sec ">
 					<div class="listimg listimg_2_of_1">
 						  <img src="static/autohome/images/service-2.png" alt="" />
 					</div>
 					<div class="text list_2_of_1">
-						  <h3>Сверка маркировочных обозначений и датировок:</h3>
-						  <p>- стекла, ремни безопасности, оптика, и т.д.</p>
+						  <h3> Автоподбор под ключ </h3>
+						  <p>Лучшее предложение при покупке авто. Преимущество разовой диагностики авто. Мы проведем тотальную проверку рынка и найдем лучший атомобиль </p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>  
+			<div class="section group sec_group">
+				<div class="col-md-6 service_sec">
+					<div class="listimg listimg_2_of_1">
+						  <img src="static/autohome/mages/service-3.png" alt="" />
+					</div>
+				    <div class="text list_2_of_1">
+						<h3> Автоэксперт на день </h3>
+						<p>Выгодная услуга при осмотре более автомобилей за один день. Советы по выбору объявлений. Передвижение на машине эксперта по Тульской области, также возможен выезд и в другие регионы. </p>
+				   </div>
+				   <div class="clearfix"></div>
+			   </div>			
+				<div class="col-md-6 service_sec">
+					<div class="listimg listimg_2_of_1">
+						  <img src="static/autohome/images/service-4.png" alt="" />
+					</div>
+					<div class="text list_2_of_1">
+						  <h3> Приёмка нового авто </h3>
+						  <p> При покупке автомобиля в автосалоне очень важно проверить наличие скрытых дефектов, до подписания приема акта передачи.</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -35,59 +57,75 @@
 			<div class="section group sec_group">
 				<div class="col-md-6 service_sec">
 					<div class="listimg listimg_2_of_1">
-						  <img src="static/autohome/images/service-3.png" alt="" />
+						  <img src="static/autohome/images/service-5.png" alt="" />
 					</div>
 				    <div class="text list_2_of_1">
-						<h3>Проверка кузова:</h3>
-						<p>- силовая часть
-							- вторичные окрасы / ремонт элемента
-							- болты оперения
-							- оригинальность элементов, зазоры</p>
+						<h3> Удаленная диагностика авто для регионов </h3>
+						<p> Осмотр авто без вашего присутствия. Составление фотоотчета и анкеты на фирменном бланке.</p>
 				   </div>
 				   <div class="clearfix"></div>
-			   </div>
-				<div class="col-md-6 service_sec">
-					<div class="listimg listimg_2_of_1">
-						  <img src="static/autohome/images/service-4.png" alt="" />
-					</div>
-					<div class="text list_2_of_1">
-						  <h3>Выявления недостатков салона и багажного отделения:</h3>
-						  <p>- осмотр наличия систем безопасности
-							  - осмотр повреждения различного характера
-							  - проверка работоспособности электронных систем</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		 <div class="section group sec_group">
-				<div class="col-md-6 service_sec">
-					<div class="listimg listimg_2_of_1">
-						<img src="static/autohome/images/service-5.png" alt="" />
-					</div>
-				    <div class="text list_2_of_1">
-						<h3>Компьютерная диагностика автомобиля:</h3>
-						<p>- проверка наличия активных ошибок
-							- проверка находящихся ошибок в истории
-							- проверка на корректировку пробега в блоках ЭБУ
-							- проверка текущих параметров/p>
-
-				   </div>
-				   <div class="clearfix"></div>
-			   </div>
+			   </div>			
 				<div class="col-md-6 service_sec">
 					<div class="listimg listimg_2_of_1">
 						  <img src="static/autohome/images/service-1.png" alt="" />
 					</div>
 					<div class="text list_2_of_1">
-						  <h3>Tyre Services</h3>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt  ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+						  <h3> формление договора купли-продажи </h3>
+						  <p> Составим договор для покупки авто и составим заявление для в ГИБДД Тулы. Поможем оформить полис Осаго. </p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 				<div class="clearfix"></div>
 		 </div>
+	 </div>  	   
+ </div> 
+<div class="footer2">
+	 <div class="container">
+	     <div class="ftr2-grids">
+		      <div class="col-md-4 ftr2-grid1">
+				 <h3> Об эксперте </h3>
+				 <ul>
+					 <li><a href="{% url 'about' %}"> Об эксперте </a></li>
+					<li><a href="{% url 'services' %}"> Услуги </a></li>
+					<li><a href="{% url 'blog' %}"> Новости </a></li>
+					<li><a href="{% url 'gallery' %}"> Осмотры </a></li>
+					<li><a href="{% url 'contact' %}">Контакты </a></li>
+				 </ul>
+			 </div>
+			 <div class="col-md-4 ftr2-grid2">
+				 <h3>Последние новости </h3>
+				 <div class="ftr2-grid">
+						 <p>Экстерьер нового Fulwin A8L C-DM стал более стильным: он оснащен восьмиугольной решеткой радиатора с матричным декором, а тонкие фары теперь не соединены с решеткой. Сзади заметно изменение логотипа – вместо «CHERY» теперь используется слово «FULWIN», а также обновлена форма задних фонарей.</p>
+						 <a href="#"> 1 час назад </a>
+				  </div>
+				  <div class="ftr2-grid">
+						 <p>В сентябре 2024 года россияне купили 529,4 тыс. легковых автомобилей с пробегом
+Сентябрь 2024 года завершился на российском вторичном рынке легковых автомобилей с показателем в 529,4 тысячи проданных машин. Несмотря на небольшое снижение по сравнению с августом (5,5%), общий объем продаж все же превысил сентябрьский результат прошлого года на 3,9%.</p>
+						 <a href="#"> 3 часа назад </a>
+				  </div>
+			 </div>
+			 <div class="col-md-4 ftr6-grid3">
+				 <h3>Оставить заявку на услугу:</h3>
+				 <p>Заполни форму с описанием и укажи обратный контакт для связи или позвони по номеру: +7 (915) 684-52-73  </p>
+				 <form>
+					  <input type="text" class="text" value="Enter Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Email';}">
+					 <input type="submit" value="Subscribe"/>
+				 </form>
+				 <div class="social">
+					   <ul>
+							<li><a href="#"><i class="facebook"></i></a></li>
+							<li><a href="#"><i class="twitter"></i></a></li>
+							<li><a href="#"><i class="dribble"></i></a></li>
+							<li><a href="#"><i class="google"></i></a></li>
+					  </ul>
+				 </div>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
 	 </div>
- </div>
+	 <div class="col-md-8 ftr2-bottom">
+			<p>Copyright &copy; 2024<span>AUTOBOTS</span> All rights reserved | Design by <a href="https://www.avito.ru/tula/predlozheniya_uslug/avtopodbor_tula_-_tul_obl_proverka_avto_s_probegom_2269374497m">Auto</p>
+	 </div>
+</div>
 <!---->
 {% endblock %}

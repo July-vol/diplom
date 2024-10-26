@@ -1,26 +1,25 @@
 from django.db import models
+from django.urls import reverse
 
 
-class Autohome(models.Model):
-    objects = all
+class Index(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     featured_image = models.ImageField(default="default.jpg", upload_to="projects/%Y/%m/%d")
-    demo_link = models.CharField(max_length=200, blank=True)
-    source_link = models.CharField(max_length=200, blank=True)
-    tags = models.ManyToManyField('Tag', blank=True)
-    vote_total = models.IntegerField(default=0, blank=True)
-    vote_ratio = models.IntegerField(default=0, blank=True)
     created = models.DateTimeField(auto_now_add=True)
+    time_created = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
 
 
-def __str__(self):
-    return self.title
+class Blog(models.Model):
+    title = models.CharField(max_length=255, verbose_name='Название')
+    anons = models.CharField(max_length=255, verbose_name='Анонс')
+    description = models.TextField(blank=True, verbose_name='Статья')
+    photo = models.ImageField(upload_to="photos/%Y/%m/%d/", blank=True, verbose_name='Фото')
+    time_created = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
 
 
-class Tag(models.Model):
-    name = models.CharField(max_length=200)
-    created = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.name
+class Gallery(models.Model):
+    photo = models.ImageField(upload_to="photos/%Y/%m/%d/", blank=True, verbose_name='Фото')
+    title = models.CharField(max_length=255, verbose_name='Название')
+    description = models.TextField(blank=True, verbose_name='Описание')
+    time_created = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')

@@ -4,7 +4,7 @@
 	 <div class="container">
 	     <div class="header">
 			 <div class="logo">
-				 <h1><a href="index"><img src="static 'autohome/images/car.png" alt=""/>AUTO <span>BOTS</span></a></h1>
+				 <h1><a href="index.html"><img src="static/images/car.png" alt=""/>AUTO <span>BOTS</span></a></h1>
 			 </div>
 			 <div class="top_details">
 				 -<p><span></span> +7-915-684-52-73 </p>
@@ -28,12 +28,12 @@
 			 </div>
 			 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav">
-					<li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="gallery.html">Gallery</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
+					<li class="active"><a href="{% url 'index' %}"> Главная <span class="sr-only">(current)</span></a></li>
+					<li><a href="{% url 'about' %}"> Об эксперте </a></li>
+					<li><a href="{% url 'services' %}"> Услуги </a></li>
+					<li><a href="{% url 'blog' %}"> Новости </a></li>
+					<li><a href="{% url 'gallery' %}"> Осмотры </a></li>
+					<li><a href="{% url 'contact' %}">Контакты </a></li>
 				  </ul>
 			 </div>
 	      </nav>

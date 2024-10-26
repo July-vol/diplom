@@ -1,36 +1,26 @@
 {% extends 'autohome/base.html' %}
 {% block content %}
-<div class="gallery">
-		<div class="container">
-			<div class="gallery-top gal_heading">
-				<h2> Осмотры </h2>
-				<ol class="breadcrumb">
-				<li><a href="{% url 'index' %}"> Главная </a></li>
-				<li class="active"> Осмотры </li>
-			    </ol>
-			</div>
-			<div class="gallery-bottom">
-				<ul id="og-grid" class="og-grid">
-					 {% for pic in pics %}
-						 <div class="col-md-6 welcome_info">
-							 <div><img src="{{ pic.photo.url }}" class="img-responsive" alt="">
-						 <h4>{{ pic.title }}</h4>
-					 <h5> {{ pic.description }} </h5>
-							 </div>
-						 </div>
-				 <p> {{ pic.time_created }}</p>
-			<div class="clearfix"> </div>
-					</ul>
-		{% endfor%}
-	</div>
 
-	<!----end-gallery---->
-	<script src="js/grid.js"></script>
-		<script>
-			$(function() {
-				Grid.init();
-			});
-		</script>
+<div class="welcome">
+	<div class="container">
+	      <h3 class="type"> Автоновости </h3>
+	      <ol class="breadcrumb">
+				<li><a href="{% url 'index' %}"> Главная </a></li>
+				<li class="active"> Автоновости </li>
+		 </ol>
+		 <div class="welcome_sec">
+			 {% for new in news %}
+			 <div class="col-md-6 welcome_info">
+						 <h4>{{ new.title }}</h4>
+					 <h5> {{ new.anons }} </h5>
+			</div>
+					 <div><img src="{{ new.photo.url }}" class="img-responsive" alt="">
+					 </div>
+				 <p> {{ new.description}}</p>
+				 </div>
+</div>
+        {% endfor%}
+    </div>
 <!---->
 <div class="footer2">	
 	 <div class="container">
