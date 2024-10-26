@@ -10,17 +10,14 @@
 			    </ol>
 			</div>
 			<div class="gallery-bottom">
-				<ul id="og-grid" class="og-grid">
+
 					 {% for pic in pics %}
-						 <div class="col-md-6 welcome_info">
+						 <div class="biseller-column">
 							 <div><img src="{{ pic.photo.url }}" class="img-responsive" alt="">
 						 <h4>{{ pic.title }}</h4>
 					 <h5> {{ pic.description }} </h5>
 							 </div>
-						 </div>
 				 <p> {{ pic.time_created }}</p>
-			<div class="clearfix"> </div>
-					</ul>
 		{% endfor%}
 	</div>
 
