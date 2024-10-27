@@ -10,30 +10,34 @@
 			 </ol>
 			</div>
 			<div class="contact-bottom">
-				<iframe src="https://www.google.ru/maps/place/Тула,+Тульская+обл./@54.1591369,37.5854https://yandex.ru/maps/15/tula/?ll=37.627279%2C54.185279&z=14.74" frameborder="0" style="border:0"></iframe>
-				<div class="contact-text">
+<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af79128990ae04617cbc7a9148216c68c55039da8b370ecbda4d324e4201bd8cf&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+<div class="contact-text">
 					<div class="col-md-3 contact-right">
 						<div class="address">
 							<h5> Адрес </h5>
 							<p>AUTOBOTS,
-							<span>Tula </span>
-							st.Sovetskaya 11 </p>
+							<span>г.Тула</span>
+							пр-т. Ленина, д. 26-А </p>
 						</div>
 						<div class="address">
-							<h5>Адрес</h5>
-							-<p>Tel:7-915-684-52-73,
-							<span>Fax:190-4509-494</span>
-							Email: <a href="mailto:example@email.com">contact@example.com</a></p>
+							<h5>Телефоны</h5>
+							-<p>Tel:+7-915-684-52-73,
+							<span>Fax:+7-952-189-54-59 </span>
+							Email: <a href="mailto:autobots71@ya.ru"> autobots71@ya.ru </a></p>
 						</div>
 					</div>
 					<div class="col-md-9 contact-left">
 						<form>
+							{{ form.name }}
 						<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" />
-						<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" />
-						<input type="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" />
-						<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
-							<div class="submit-btn">								
-									<input type="submit" value="SUBMIT">							
+							{{ form.phone }}
+							<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" />
+							{{ form.email }}
+							<input type="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" />
+							{{ form.message }}
+							<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+							<div class="submit-btn">
+									<input type="submit" value="Отправить">
 							</div>
 						</form>
 					</div>						
@@ -47,50 +51,48 @@
 	 <div class="container">
 	     <div class="ftr2-grids">
 		      <div class="col-md-4 ftr2-grid1">			 
-				 <h3>About Us</h3>
+				 <h3> Об эксперте </h3>
 				 <ul>
-					  <li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="gallery.html">Gallery</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
+					 <li><a href="{% url 'about' %}"> Об эксперте </a></li>
+					<li><a href="{% url 'services' %}"> Услуги </a></li>
+					<li><a href="{% url 'blog' %}"> Новости </a></li>
+					<li><a href="{% url 'gallery' %}"> Осмотры </a></li>
+					<li><a href="{% url 'contact' %}">Контакты </a></li>
 				 </ul>
 			 </div>
 			 <div class="col-md-4 ftr2-grid2">
-				 <h3>Latest Tweets</h3>
+				 <h3>Последние новости </h3>
 				 <div class="ftr2-grid">
-						 <p>It is a long established fact that a 
-						 reader will be distracted by the of a reader page when at its layout.</p>
-						 <a href="#">1 Hour ago</a>
+						 <p>Экстерьер нового Fulwin A8L C-DM стал более стильным: он оснащен восьмиугольной решеткой радиатора с матричным декором, а тонкие фары теперь не соединены с решеткой. Сзади заметно изменение логотипа – вместо «CHERY» теперь используется слово «FULWIN», а также обновлена форма задних фонарей.</p>
+						 <a href="#"> 1 час назад </a>
 				  </div>
 				  <div class="ftr2-grid">
-						 <p>It is a long established fact that a 
-						 reader will be distracted by the of a reader page when at its layout.</p>
-						 <a href="#">3 Hour ago</a>
+						 <p>В сентябре 2024 года россияне купили 529,4 тыс. легковых автомобилей с пробегом
+Сентябрь 2024 года завершился на российском вторичном рынке легковых автомобилей с показателем в 529,4 тысячи проданных машин. Несмотря на небольшое снижение по сравнению с августом (5,5%), общий объем продаж все же превысил сентябрьский результат прошлого года на 3,9%.</p>
+						 <a href="#"> 3 часа назад </a>
 				  </div>
 			 </div>
 			 <div class="col-md-4 ftr6-grid3">
-				 <h3>Get in Touch</h3>				 
-				 <p>It is a long established fact that a reader will be distracted by the r-
-				 eadable content of a page when looking at its layout.</p>
-				 <form>					 
+				 <h3>Оставить заявку на услугу:</h3>
+				 <p>Заполни форму с описанием и укажи обратный контакт для связи или позвони по номеру: +7 (915) 684-52-73  </p>
+				 <form>
 					  <input type="text" class="text" value="Enter Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Email';}">
-					 <input type="submit" value="Subscribe"/>
+					 <input type="submit" value="Написать эксперту"/>
 				 </form>
 				 <div class="social">
 					   <ul>
 							<li><a href="#"><i class="facebook"></i></a></li>
 							<li><a href="#"><i class="twitter"></i></a></li>
-							<li><a href="#"><i class="dribble"></i></a></li>	
-							<li><a href="#"><i class="google"></i></a></li>										
+							<li><a href="#"><i class="dribble"></i></a></li>
+							<li><a href="#"><i class="google"></i></a></li>
 					  </ul>
 				 </div>
 			 </div>
 			 <div class="clearfix"></div>
 		 </div>
 	 </div>
-	 <div class="col-md-8 ftr2-bottom">		
-			<p>Copyright &copy; 2015 <span>AUTOBOTS</span> All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+	 <div class="col-md-8 ftr2-bottom">
+			<p>Copyright &copy; 2024<span>AUTOBOTS</span> All rights reserved | Design by <a href="https://www.avito.ru/tula/predlozheniya_uslug/avtopodbor_tula_-_tul_obl_proverka_avto_s_probegom_2269374497m">Auto</p>
 	 </div>
 </div>
 <!---->

@@ -23,3 +23,7 @@ class Gallery(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название')
     description = models.TextField(blank=True, verbose_name='Описание')
     time_created = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
+
+
+class ContactForm:
+    pass

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Blog, Gallery
+from .models import Blog, Gallery, ContactForm
 
 
 def index(request):
@@ -21,8 +21,14 @@ def blog(request):
 
 def gallery(request):
     pics = Gallery.objects.all()
-    return render(request, 'autohome/gallery.html',  {'pics': pics})
+    return render(request, 'autohome/gallery.html', {'pics': pics})
 
 
 def contact(request):
+    context = {}
+    if request.method == 'POST':
+        pass
+    else:
+        form = ContactForm()
+        context['form'] = form
     return render(request, 'autohome/contact.html')
