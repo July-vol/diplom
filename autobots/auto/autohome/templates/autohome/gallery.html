@@ -10,11 +10,10 @@
 			    </ol>
 			</div>
 			<div class="gallery-bottom">
-
 					 {% for pic in pics %}
 						 <div class="biseller-column">
-							 <div><img src="{{ pic.photo.url }}" class="img-responsive" alt="">
-						 <h4>{{ pic.title }}</h4>
+							 <h4>{{ pic.title }}</h4>
+							 <div><img src="{{ pic.photo.url }}" class="img-responsive" alt=""><div>
 					 <h5> {{ pic.description }} </h5>
 							 </div>
 				 <p> {{ pic.time_created }}</p>
@@ -40,6 +39,7 @@
 					<li><a href="{% url 'blog' %}"> Новости </a></li>
 					<li><a href="{% url 'gallery' %}"> Осмотры </a></li>
 					<li><a href="{% url 'contact' %}">Контакты </a></li>
+					 <li><a href="{% url 'feedback' %}">Отзывы </a></li>
 				 </ul>
 			 </div>
 			 <div class="col-md-4 ftr2-grid2">
@@ -56,17 +56,22 @@
 			 </div>
 			 <div class="col-md-4 ftr6-grid3">
 				 <h3>Оставить заявку на услугу:</h3>
-				 <p>Заполни форму с описанием и укажи обратный контакт для связи или позвони по номеру: +7 (915) 684-52-73  </p>
+				 <p>Заполни форму с описанием и укажи обратный контакт для связи или позвони по номеру: 7-952-189-54-59 </p>
 				 <form>
-					  <input type="text" class="text" value="Enter Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Email';}">
-					 <input type="submit" value="Написать эксперту"/>
+					  <input type="text" class="text" value="Введите Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Введите Email';}">
+					 <input type="submit" value="Написать"/>
 				 </form>
 				 <div class="social">
+
 					   <ul>
-							<li><a href="#"><i class="facebook"></i></a></li>
-							<li><a href="#"><i class="twitter"></i></a></li>
-							<li><a href="#"><i class="dribble"></i></a></li>
-							<li><a href="#"><i class="google"></i></a></li>
+						   <li class="contact_btn" style="float:right; padding-left: 50x">
+				 <a href="+79521895459" class="btn btn-success"> CAll </a></li>
+						   <li class="contact_btn" style="float:right; padding-left: 50x">
+				 <a href="//wa.me/79156845273?text=срочный осмотр авто" class="btn btn-success"> WatsApp</a></li>
+							<li class="contact_btn" style="float:right; padding-left: 50x">
+				 <a href="https://t.me/howdyho_official" class="btn btn-success"> Telegram</a></li>
+							<li class="contact_btn" style="float:right; padding-left: 50x">
+				 <a href="https://www.avito.ru/tula/predlozheniya_uslug/avtopodbor_tula_-_tul_obl_proverka_avto_s_probegom_2269374497" class="btn btn-success"> Avito </a></li>
 					  </ul>
 				 </div>
 			 </div>

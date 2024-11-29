@@ -6,13 +6,15 @@
 			 <div class="logo">
 				 <h1><a href="index.html"><img src="static/images/car.png" alt=""/>AUTO <span>BOTS</span></a></h1>
 			 </div>
+ <div class="contact_btn" style="float:right; padding-left: 50x">
+				 <a href="+79156845273" class="btn btn-success"> ПОЗВОНИТЬ</a></div>
 			 <div class="top_details">
-				 -<p><span></span> +7-915-684-52-73 </p>
+				 <p><span></span> +7-915-684-52-73 </p>
 				 <div class="search">
 				 <form>
 					<input type="text" value="" placeholder="Поиск...">
 					<input type="submit" value="">
-					</form>
+				 </form>
 			     </div>
 			 </div>
 			 <div class="clearfix"></div>
@@ -34,12 +36,26 @@
 					<li><a href="{% url 'blog' %}"> Новости </a></li>
 					<li><a href="{% url 'gallery' %}"> Осмотры </a></li>
 					<li><a href="{% url 'contact' %}">Контакты </a></li>
-				  </ul>
+					<li><a href="{% url 'feedback' %}">Отзывы </a></li>
+					<li class="logo">{{user.username}}</li>
+                {% if user.is_authenticated %}
+                <li>
+                    <form action="{% url 'logoutuser' %}" method="post">
+                      {% csrf_token %}
+						<li><a href="{% url 'createtodo' %}">Оставить отзыв </a></li>
+                        <button class="search">Выйти</button>
+                    </form>
+                </li>
+                {% else %}
+                <li><a href="{% url 'signupuser' %}">Регистрация</a></li>
+                <li><a href="{% url 'loginuser' %}">Войти</a></li>
+                {% endif %}
+            </ul>
 			 </div>
 	      </nav>
+		 <div  id="top" class="callbacks_container">
 
-		<div  id="top" class="callbacks_container">
-				<ul class="rslides" id="slider3">
+				<ul class="slides" id="slider3">
 					<li>
 					 <div class="banner-info">
 						 <h3>Разовый осмотр автомобиля</h3>

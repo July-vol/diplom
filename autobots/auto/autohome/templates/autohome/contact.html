@@ -1,4 +1,4 @@
-{% extends 'autohome/base.html' %}-
+{% extends 'autohome/base.html' %}
 {% block content %}
 <div class="contact">
 		<div class="container">
@@ -11,41 +11,40 @@
 			</div>
 			<div class="contact-bottom">
 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af79128990ae04617cbc7a9148216c68c55039da8b370ecbda4d324e4201bd8cf&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
-<div class="contact-text">
+				<div class="contact-text">
 					<div class="col-md-3 contact-right">
 						<div class="address">
 							<h5> Адрес </h5>
 							<p>AUTOBOTS,
-							<span>г.Тула</span>
+							<span> г.Тула </span>
 							пр-т. Ленина, д. 26-А </p>
 						</div>
 						<div class="address">
 							<h5>Телефоны</h5>
-							-<p>Tel:+7-915-684-52-73,
+							<p>Tel:+7-952-189-54-59,
 							<span>Fax:+7-952-189-54-59 </span>
 							Email: <a href="mailto:autobots71@ya.ru"> autobots71@ya.ru </a></p>
+							</div>
 						</div>
-					</div>
 					<div class="col-md-9 contact-left">
-						<form>
-							{{ form.name }}
-						<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" />
-							{{ form.phone }}
-							<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" />
-							{{ form.email }}
-							<input type="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" />
-							{{ form.message }}
-							<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+						<h2>Напишите нам, если у вас есть вопросы</h2>
+						<p>Пожалуйста, напишите свое имя, адрес электронной почты и сообщение.</p>
+						<form action="{% url 'feedback_view' %}" class="col-md-9 contact-left" method="POST">
+							{% csrf_token %}
+							{{ form.as_p }}
+<!--						<input type="text" value="Имя" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Имя';}" />-->
+<!--						<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email)';}" />-->
+<!--						<input type="text" value="Телефон" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Телефон';}" />-->
+<!--						<textarea value="Сообщение:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Сообщение';}">Message..</textarea>-->
 							<div class="submit-btn">
 									<input type="submit" value="Отправить">
 							</div>
 						</form>
-					</div>						
+					</div>
 					<div class="clearfix"></div>
 				</div>
 			</div>
 		</div>
-	</div>
 <!---->
 <div class="footer2">	
 	 <div class="container">
@@ -58,6 +57,7 @@
 					<li><a href="{% url 'blog' %}"> Новости </a></li>
 					<li><a href="{% url 'gallery' %}"> Осмотры </a></li>
 					<li><a href="{% url 'contact' %}">Контакты </a></li>
+					 <li><a href="{% url 'feedback' %}">Отзывы </a></li>
 				 </ul>
 			 </div>
 			 <div class="col-md-4 ftr2-grid2">
@@ -75,16 +75,22 @@
 			 <div class="col-md-4 ftr6-grid3">
 				 <h3>Оставить заявку на услугу:</h3>
 				 <p>Заполни форму с описанием и укажи обратный контакт для связи или позвони по номеру: +7 (915) 684-52-73  </p>
-				 <form>
-					  <input type="text" class="text" value="Enter Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Email';}">
-					 <input type="submit" value="Написать эксперту"/>
+			 <form>
+					  <input type="text" class="text" value="Введите Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Введите Email';}">
+					 <input type="submit" value="Написать"/>
 				 </form>
+
 				 <div class="social">
+
 					   <ul>
-							<li><a href="#"><i class="facebook"></i></a></li>
-							<li><a href="#"><i class="twitter"></i></a></li>
-							<li><a href="#"><i class="dribble"></i></a></li>
-							<li><a href="#"><i class="google"></i></a></li>
+						   <li class="contact_btn" style="float:right; padding-left: 50x">
+				 <a href="+79521895459" class="btn btn-success"> CAll </a></li>
+						   <li class="contact_btn" style="float:right; padding-left: 50x">
+				 <a href="//wa.me/79156845273?text=срочный осмотр авто" class="btn btn-success"> WatsApp</a></li>
+							<li class="contact_btn" style="float:right; padding-left: 50x">
+				 <a href="https://t.me/howdyho_official" class="btn btn-success"> Telegram</a></li>
+							<li class="contact_btn" style="float:right; padding-left: 50x">
+				 <a href="https://www.avito.ru/tula/predlozheniya_uslug/avtopodbor_tula_-_tul_obl_proverka_avto_s_probegom_2269374497" class="btn btn-success"> Avito </a></li>
 					  </ul>
 				 </div>
 			 </div>
@@ -92,7 +98,7 @@
 		 </div>
 	 </div>
 	 <div class="col-md-8 ftr2-bottom">
-			<p>Copyright &copy; 2024<span>AUTOBOTS</span> All rights reserved | Design by <a href="https://www.avito.ru/tula/predlozheniya_uslug/avtopodbor_tula_-_tul_obl_proverka_avto_s_probegom_2269374497m">Auto</p>
+			<p>Copyright &copy; 2024<span>AUTOBOTS</span> All rights reserved | Design by <a href="//wa.me/79156845273">Auto</a></p>
 	 </div>
 </div>
 <!---->

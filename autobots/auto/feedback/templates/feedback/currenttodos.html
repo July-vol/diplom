@@ -1,0 +1,21 @@
+{% extends 'autohome/base.html' %}
+
+{% block content %}
+<h1>Отзывы:</h1>
+<ul>
+    {% for post in posts %}
+    <li>
+        <a href="{% url 'viewtodo' post.id %}">
+            {% if post.important %}
+            <b>{{ post.title }}</b>
+            {% else %}
+            {{ post.created }}
+            {% endif %}
+            {% if post.memo %}
+            - {{ post.memo }}
+            {% endif %}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
