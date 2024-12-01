@@ -1,5 +1,6 @@
-from feedback.forms import FeedBackForm, FeedBacksForm
-from feedback.models import FeedBacks
+from django_comments.forms import CommentForm
+from sqlalchemy.testing.pickleable import Order
+from feedback.forms import FeedBackForm
 from .models import Blog, Gallery
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
@@ -51,7 +52,3 @@ def contact(request):
     form = FeedBackForm()
     return render(request, "autohome/contact.html", {'form': form})
 
-
-def feedback(request):
-    posts = FeedBacks.objects.all()
-    return render(request, 'autohome/feedback.html', {'posts': posts})

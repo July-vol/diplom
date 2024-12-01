@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django import forms
 
 
 class Index(models.Model):
@@ -28,7 +28,5 @@ class Gallery(models.Model):
     photo3 = models.ImageField(upload_to="photos/%Y/%m/%d/", blank=True, verbose_name='Фото')
     description = models.TextField(blank=True, verbose_name='Описание')
     time_created = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
-
-
 
 

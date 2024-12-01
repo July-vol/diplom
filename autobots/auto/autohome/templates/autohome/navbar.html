@@ -9,7 +9,7 @@
  <div class="contact_btn" style="float:right; padding-left: 50x">
 				 <a href="+79156845273" class="btn btn-success"> ПОЗВОНИТЬ</a></div>
 			 <div class="top_details">
-				 <p><span></span> +7-915-684-52-73 </p>
+				 <p><span></span> +7-952-189-54-59 </p>
 				 <div class="search">
 				 <form>
 					<input type="text" value="" placeholder="Поиск...">
@@ -36,23 +36,7 @@
 					<li><a href="{% url 'blog' %}"> Новости </a></li>
 					<li><a href="{% url 'gallery' %}"> Осмотры </a></li>
 					<li><a href="{% url 'contact' %}">Контакты </a></li>
-					<li><a href="{% url 'feedback' %}">Отзывы </a></li>
-					<li class="logo">{{user.username}}</li>
-                {% if user.is_authenticated %}
-                <li>
-                    <form action="{% url 'logoutuser' %}" method="post">
-                      {% csrf_token %}
-						<li><a href="{% url 'createtodo' %}">Оставить отзыв </a></li>
-                        <button class="search">Выйти</button>
-                    </form>
-                </li>
-                {% else %}
-                <li><a href="{% url 'signupuser' %}">Регистрация</a></li>
-                <li><a href="{% url 'loginuser' %}">Войти</a></li>
-                {% endif %}
-            </ul>
-			 </div>
-	      </nav>
+		 	</nav>
 		 <div  id="top" class="callbacks_container">
 
 				<ul class="slides" id="slider3">

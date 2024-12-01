@@ -79,6 +79,7 @@
 		 </div>
 	 </div>  	   
  </div> 
+<!---->
 <div class="footer2">
 	 <div class="container">
 	     <div class="ftr2-grids">
@@ -90,31 +91,23 @@
 					<li><a href="{% url 'blog' %}"> Новости </a></li>
 					<li><a href="{% url 'gallery' %}"> Осмотры </a></li>
 					<li><a href="{% url 'contact' %}">Контакты </a></li>
-					 <li><a href="{% url 'feedback' %}">Отзывы </a></li>
 
 				 </ul>
 			 </div>
 			 <div class="col-md-4 ftr2-grid2">
 				 <h3>Последние новости </h3>
 				 <div class="ftr2-grid">
-						 <p>Экстерьер нового Fulwin A8L C-DM стал более стильным: он оснащен восьмиугольной решеткой радиатора с матричным декором, а тонкие фары теперь не соединены с решеткой. Сзади заметно изменение логотипа – вместо «CHERY» теперь используется слово «FULWIN», а также обновлена форма задних фонарей.</p>
-						 <a href="#"> 1 час назад </a>
-				  </div>
-				  <div class="ftr2-grid">
-						 <p>В сентябре 2024 года россияне купили 529,4 тыс. легковых автомобилей с пробегом
-Сентябрь 2024 года завершился на российском вторичном рынке легковых автомобилей с показателем в 529,4 тысячи проданных машин. Несмотря на небольшое снижение по сравнению с августом (5,5%), общий объем продаж все же превысил сентябрьский результат прошлого года на 3,9%.</p>
-						 <a href="#"> 3 часа назад </a>
+					 <a href="{% url 'blog' %}">Мир автолюбителей-узнай больше об авто!</a>
+						 <p> {% for new in news %}</p>
+					         {% endfor%}
 				  </div>
 			 </div>
-			 <div class="col-md-4 ftr6-grid3">
-				 <h3>Оставить заявку на услугу:</h3>
-				 <p>Заполни форму с описанием и укажи обратный контакт для связи или позвони по номеру: +7 (915) 684-52-73  </p>
-				 <form>
-					  <input type="text" class="text" value="Enter Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Email';}">
-					 <input type="submit" value="Написать"/>
-				 </form>
-				 <div class="social">
-
+ <div class="col-md-4 ftr6-grid3">
+				 <h3>Получи бесплатную консультацию прямо сейчас:</h3>
+				 <div>
+					 <a href="{% url 'contact' %}">Напиши нам на e-mail!</a>
+				 </div>
+				 <div class=".label">
 					   <ul>
 						   <li class="contact_btn" style="float:right; padding-left: 50x">
 				 <a href="+79156845273" class="btn btn-success"> CAll </a></li>
@@ -133,6 +126,6 @@
 	 <div class="col-md-8 ftr2-bottom">
 			<p>Copyright &copy; 2024<span>AUTOBOTS</span> All rights reserved | Design by <a href="https://www.avito.ru/tula/predlozheniya_uslug/avtopodbor_tula_-_tul_obl_proverka_avto_s_probegom_2269374497m">Auto</p>
 	 </div>
+	{% endblock %}
 </div>
 <!---->
-{% endblock %}
